@@ -10,7 +10,7 @@ xi,yi,zi=[],[],[]
 
 def take_input():
     print "============== INPUTS =============="
-    global n, di,ci,ri,d,cd,s,cs, xi,yi,zi, xm,ym,zm, rmax,bmax 
+    global n, di,ci,ri,d,cd,s,cs, xi,yi,zi, xm,ym,zm, rmax,bmax,zs
     n =input('n: ')
     di=input('di: ')
     ci=input('ci: ')
@@ -31,9 +31,11 @@ def take_input():
 
     rmax=input('rmax: ')
     bmax=input('bmax: ')
+    
+    zs =input('zs: ')
 
 def belegundu(l):
-    x,y,z,xs,ys,zs=l
+    x,y,z,xs,ys=l
     f1,f2,f3=0,0,0
     for i in range(n):
         f1 += (di+ci*ri[i])*(((x-xi[i])**2+(y-yi[i])**2+(z-zi[i])**2 )**0.5)
@@ -52,7 +54,7 @@ def belegundu(l):
     return [f], c
 
 take_input()
-problem = Problem(6, 1, n+2)
+problem = Problem(5, 1, n+2)
 problem.types[:] = Real(0, 2000)#[Real(-sys.maxint,sys.maxint),Real(-sys.maxint,sys.maxint),Real(-sys.maxint,sys.maxint),Real(0, 2000), Real(0, 2000), Real(0, 2000)]
 problem.constraints[:] = "<=0"
 problem.function = belegundu
