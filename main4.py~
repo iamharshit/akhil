@@ -71,6 +71,3 @@ for solution in algorithm.result:
 index= np.argmax(algorithm.result)
 print 'Objective functtion value: ',algorithm.result[index].objectives[0]
 print 'Parameters: ',algorithm.result[index].variables
-
-print ''
-raw_input()
