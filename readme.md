@@ -11,7 +11,7 @@
 
 >### Algorithm
 >
->The code uses Sequential Least Squares Programming optimization algorithm (SLSQP) as given over (here)[https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html#constrained-minimization-of-multivariate-scalar-functions-minimize] and (there)[https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize].
+>The code uses Sequential Least Squares Programming optimization algorithm (SLSQP) as given over [here](https://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html#constrained-minimization-of-multivariate-scalar-functions-minimize) and [there](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize).
 >
 >### The Code
 >Code uses python's `scipy` library which have an in built implementation of SLSQP algorithm.
