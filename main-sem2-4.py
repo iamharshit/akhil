@@ -15,9 +15,9 @@ def frange(start,stop, step=1.0):
         start +=step
 
 def optimise_production():
-	global n, R
+	global n, R, sum_of_all_n
 	
-	n =input('n(between 1 to 4 only): ')
+	n = input('n(between 1 to 4 only): ')
 	if(n<1 or n>4):
 		print('----------VALUE OUT OF RANGE-------------')
 		input()
@@ -28,12 +28,14 @@ def optimise_production():
 		mini.append( input('min '+str(i+1)+': ') )
 		maxi.append( input('max '+str(i+1)+': ') )
 		print('')
-
+	
+	sum_of_all_n = input("Enter sum of all n's:")
+	
 	temp = 0
 	for i in range(n):
 		temp += maxi[i]
-	if(temp<4):
-		print('---------EVEN SUM OF MAXIMUM VALUE ISNOT EQUAL TO 4----------')
+	if(temp<sum_of_all_n):
+		print('---------EVEN SUM OF MAXIMUM VALUE ISNOT EQUAL TO '+sum_of_all_n+'----------')
 		input()
 		sys.exit(0)
 
@@ -46,7 +48,7 @@ def optimise_production():
 			x, y = l
 			f = -x*random.uniform(0.1, 6) -y*random.uniform(0.1, 6)
 
-			c = x + y - 4
+			c = x + y - sum_of_all_n
 			 
 			return [f], [c]		
 		from platypus import NSGAII, Problem, Real		
@@ -70,7 +72,7 @@ def optimise_production():
 			x, y, z = l
 			f = -x*random.uniform(0.1, 6) -y*random.uniform(0.1, 6) -z*random.uniform(0.1, 6)
 
-			c = x + y +z - 4
+			c = x + y +z - sum_of_all_n
 			 
 			return [f], [c]		
 		from platypus import NSGAII, Problem, Real		
@@ -96,7 +98,7 @@ def optimise_production():
 			x, y, z, q = l
 			f = -x*random.uniform(0.1, 6) -y*random.uniform(0.1, 6) -z*random.uniform(0.1, 6) -q*random.uniform(0.1,6)
 
-			c = x + y + z + q - 4
+			c = x + y + z + q - sum_of_all_n
 			 
 			return [f], [c]		
 		from platypus import NSGAII, Problem, Real		
