@@ -65,7 +65,7 @@ def optimise_production():
 		for solution in algorithm.result:
 	 		dictt[solution.objectives[0]] = solution.variables
 
-	 	R = dictt[ min(dictt.keys())][0]
+	 	R = dictt[ min(dictt.keys()) ]
 
 	elif(n==3):	
 		def belegundu(l):
@@ -90,7 +90,7 @@ def optimise_production():
 		for solution in algorithm.result:
 	 		dictt[solution.objectives[0]] = solution.variables
 
-	 	R = dictt[ min(dictt.keys())][0]
+	 	R = dictt[ min(dictt.keys())]
 
 
 	elif(n==4):
@@ -115,21 +115,21 @@ def optimise_production():
 		for solution in algorithm.result:
 	 		dictt[solution.objectives[0]] = solution.variables
 
-	 	R = dictt[ min(dictt.keys())][0]
+	 	R = dictt[ min(dictt.keys())]
 
 
 
 
 def take_input():
     print "============== INPUTS =============="
-    global n, di,ci,ri,d,cd,s,cs, xi,yi,zi, xm,ym,zm, gi, rmaxi,bmaxi,zs
+    global n, di,ci,ri,d,cd,s,cs, xi,yi,zi, xm,ym,zm, gi, rmaxi,bmaxi,zs, R
     #n =input('n: ')
     di=input('di: ')
     ci=input('ci: ')
 
     for i in range(n):
     	ri.append(R[i] * input('G['+str(i)+']: ') )
-    
+
     d=input('d: ')
     cd=input('cd: ')
     s=input('s: ')
